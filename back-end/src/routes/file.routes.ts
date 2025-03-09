@@ -15,7 +15,7 @@ export class FileRoutes {
   }
 
   private initializeRoutes() {
-    this.router.get('/:id/files/:fileId', this.fileController.getFile.bind(this.fileController));
+    this.router.get('/:fileId/files', this.fileController.getFile.bind(this.fileController));
     this.router.post('/:id/upload', upload.single('file'), this.fileController.uploadFile.bind(this.fileController));
     this.router.delete('/:id/files/:fileId', this.fileController.deleteFile.bind(this.fileController));
   }

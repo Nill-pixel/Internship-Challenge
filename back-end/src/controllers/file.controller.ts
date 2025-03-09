@@ -20,9 +20,8 @@ export class FileController {
 
   async getFile(req: Request, res: Response) {
     try {
-      const taskId = Number(req.params.id);
       const fileId = Number(req.params.fileId);
-      const file = await this.fileService.getFile(taskId, fileId)
+      const file = await this.fileService.getFile(fileId)
       res.json(file)
     } catch (error) {
       res.status(400).json({ error })
