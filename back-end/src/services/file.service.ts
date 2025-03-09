@@ -42,9 +42,12 @@ export class FileService {
       },
     });
   }
-  async getFile(fileId: number) {
-    return await prisma.file.findUnique({
-      where: { id: fileId },
+  async getFile(taskId: number, fileId: number) {
+    return await prisma.file.findFirst({
+      where: {
+        id: fileId,
+        taskId: taskId
+      }
     });
   }
 

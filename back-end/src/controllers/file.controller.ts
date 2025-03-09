@@ -19,8 +19,15 @@ export class FileController {
   }
 
   async getFile(req: Request, res: Response) {
-    const file = await this.fileService.getFile(Number(req.params.id))
-    res.json(file)
+    try {
+      const taskId = Number(req.params.id);
+      const fileId = Number(req.params.fileId);
+      const file = await this.fileService.getFile(taskId, fileId)
+      res.json(file)
+    } catch (error) {
+      res.status(400).json({ error })
+    }
+
   }
 
   async deleteFile(req: Request, res: Response) {
