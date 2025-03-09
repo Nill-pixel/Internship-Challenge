@@ -11,7 +11,6 @@ interface TaskFileListProps {
 
 
 const TaskFileList: React.FC<TaskFileListProps> = ({ files, loading, error, onDelete }) => {
-  // Component implementation remains the same
   const handleDelete = async (fileId: string) => {
     if (window.confirm('Are you sure you want to delete this file?')) {
       await onDelete(fileId);

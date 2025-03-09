@@ -16,7 +16,7 @@ const EditTask: React.FC = () => {
   useEffect(() => {
     const fetchTask = async () => {
       if (!id) return;
-      
+
       try {
         setLoading(true);
         const taskData = await getTask(id);
@@ -30,10 +30,10 @@ const EditTask: React.FC = () => {
     };
 
     fetchTask();
-  }, [id, getTask]);
+  }, [id]);
 
   if (loading) return <LoadingSpinner />;
-  
+
   if (error || !task) {
     return (
       <div className="container mx-auto px-4 py-8">
@@ -62,10 +62,10 @@ const EditTask: React.FC = () => {
         <h1 className="text-3xl font-bold">Edit Task</h1>
       </div>
 
-      <TaskForm 
-        initialData={task} 
-        onSubmit={handleSubmit} 
-        submitButtonText="Update Task" 
+      <TaskForm
+        initialData={task}
+        onSubmit={handleSubmit}
+        submitButtonText="Update Task"
       />
     </div>
   );

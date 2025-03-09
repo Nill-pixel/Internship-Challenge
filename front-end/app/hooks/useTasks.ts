@@ -19,7 +19,7 @@ export const useTasks = (filter?: string) => {
     } finally {
       setLoading(false);
     }
-  }, [filter]);
+  }, [filter]); // Make sure filter is the only dependency
 
   useEffect(() => {
     fetchTasks();

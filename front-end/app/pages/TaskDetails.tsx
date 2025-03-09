@@ -17,24 +17,24 @@ const TaskDetail: React.FC = () => {
   const { getTask, deleteTask } = useTasks();
   const { files, loading: filesLoading, error: filesError, uploadFile, deleteFile } = useFiles(id || '');
 
-  useEffect(() => {
-    const fetchTaskDetail = async () => {
-      if (!id) return;
-      
-      try {
-        setLoading(true);
-        const taskData = await getTask(id);
-        setTask(taskData);
-      } catch (err) {
-        setError('Failed to fetch task details');
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
-    };
+ useEffect(() => {
+  const fetchTaskDetail = async () => {
+    if (!id) return;
+    
+    try {
+      setLoading(true);
+      const taskData = await getTask(id);
+      setTask(taskData);
+    } catch (err) {
+      setError('Failed to fetch task details');
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-    fetchTaskDetail();
-  }, [id, getTask]);
+  fetchTaskDetail();
+}, [id]);
 
   const handleDeleteTask = async () => {
     if (!id) return;

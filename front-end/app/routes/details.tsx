@@ -1,5 +1,6 @@
+import EditTask from "~/pages/EditTask";
 import type { Route } from "./+types/home";
-import Dashboard from "~/pages/Dashboard";
+import TaskDetail from "~/pages/TaskDetails";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,5 +10,5 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Dashboard />;
+  return <TaskDetail />;
 }

@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { TaskService } from '../services/task.service';
-import { CreateTaskDto } from '../Dto/task.dto';
+import { CreateTaskDto, UpdateTaskDto } from '../Dto/task.dto';
 
 
 export class TaskController {
@@ -26,5 +26,24 @@ export class TaskController {
     }
   }
 
-  // Implementar update, delete de forma similar
+  async updateTask(req: Request, res: Response) {
+    try {
+      const id = Number(req.params.id)
+      const dto: UpdateTaskDto = req.body
+      const task = await this.taskService.updateTask(id, dto);
+      res.status(202).json(task)
+    } catch (error) {
+      res.status(400).json({ error })
+    }
+  }
+
+  async deleteTask(req: Request, res: Response) {
+    try {
+      const id = Number(req.params.id)
+      const task = await this.taskService.deleteTask(id)
+      res.status(200).json(task)
+    } catch (error) {
+      res.status(400).json({ error })
+    }
+  }
 }
