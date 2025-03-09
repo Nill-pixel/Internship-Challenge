@@ -14,6 +14,7 @@ Este é o front-end do **Gerenciador de Tarefas**, desenvolvido para o Desafio T
 
 - 📃 **Listagem de Tarefas:** Visualize todas as tarefas criadas.
 - ➕ **Criação e Edição:** Adicione e atualize tarefas facilmente.
+- ❌ **Exclusão:** Remova tarefas com um clique.
 - 📎 **Upload de Arquivos:** Anexe arquivos (como PDF, imagens, etc.) às suas tarefas.
 
 ## 🛠️ Instalação e Execução
