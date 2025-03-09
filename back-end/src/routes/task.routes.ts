@@ -19,6 +19,6 @@ export class TaskRoutes {
     this.router.get('/:id', this.taskController.getTask.bind(this.taskController));
     this.router.post('/', this.taskController.createTask.bind(this.taskController));
     this.router.put('/:id', this.taskController.updateTask.bind(this.taskController));
-    this.router.delete('/:id', this.taskController.createTask.bind(this.taskController));
+    this.router.delete('/:id', this.taskController.deleteTask.bind(this.taskController));
   }
 }

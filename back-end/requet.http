@@ -1,10 +1,13 @@
-GET http://localhost:3000/tasks/
+GET http://localhost:3001/tasks/
 
 ###
 
-POST http://localhost:3000/tasks
+POST http://localhost:3001/tasks
 Content-Type: application/json
 
 {
   "title" : "My first Task Nice"
 }
+
+###
+DELETE  http://localhost:3001/tasks/5
