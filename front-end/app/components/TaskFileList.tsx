@@ -59,7 +59,7 @@ const TaskFileList: React.FC<TaskFileListProps> = ({ files, loading, error, onDe
               <span className="text-xl mr-2">{getFileIcon(file.type || file.mimetype || '')}</span>
               <div>
                 <a
-                  href={file.url || `/tasks/${file.taskId}/files/${file.id}/download`}
+                  href={file.url || `http://localhost:3001/tasks/${file.taskId}/files/${file.id}/download`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:underline"
