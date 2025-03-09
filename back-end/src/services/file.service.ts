@@ -42,6 +42,11 @@ export class FileService {
       },
     });
   }
+  async getFile(fileId: number) {
+    return await prisma.file.findUnique({
+      where: { id: fileId },
+    });
+  }
 
   async deleteFile(fileId: number) {
     return await prisma.file.delete({ where: { id: fileId } });

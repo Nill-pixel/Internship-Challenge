@@ -18,6 +18,11 @@ export class FileController {
     }
   }
 
+  async getFile(req: Request, res: Response) {
+    const file = await this.fileService.getFile(Number(req.params.id))
+    res.json(file)
+  }
+
   async deleteFile(req: Request, res: Response) {
     await this.fileService.deleteFile(Number(req.params.fileId));
     res.status(204).send();

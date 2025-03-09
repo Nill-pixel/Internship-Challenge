@@ -9,7 +9,7 @@ import type { Task } from '~/types';
 const EditTask: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [task, setTask] = useState<Task | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true); 
   const [error, setError] = useState<string | null>(null);
   const { getTask, updateTask } = useTasks();
 
