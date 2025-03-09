@@ -43,9 +43,9 @@ export class FileService {
     });
   }
   async getFile(fileId: number) {
-    return await prisma.file.findFirst({
+    return await prisma.file.findMany({
       where: {
-        id: fileId,
+        taskId: fileId,
       }
     });
   }

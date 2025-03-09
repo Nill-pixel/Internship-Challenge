@@ -1,5 +1,6 @@
 // src/types/index.ts
-export interface TaskFile {  // Renamed from File
+export interface TaskFile {
+  mimetype: any;  // Renamed from File
   id: string;
   filename: string;
   taskId: string;
