@@ -42,11 +42,16 @@ export class FileService {
       },
     });
   }
-  async getFile(fileId: number) {
+  async getFiles(taskId: number) {
     return await prisma.file.findMany({
-      where: {
-        taskId: fileId,
-      }
+      where: { taskId },
+    });
+  }
+
+
+  async getFile(fileId: number) {
+    return await prisma.file.findUnique({
+      where: { id: fileId },
     });
   }
 

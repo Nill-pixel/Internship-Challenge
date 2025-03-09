@@ -19,5 +19,12 @@ export const fileService = {
 
   deleteFile: async (taskId: string, fileId: string): Promise<void> => {
     await api.delete(`/tasks/${taskId}/files/${fileId}`);
+  },
+
+  downloadFile: async (taskId: string, fileId: string): Promise<Blob> => {
+    const response = await api.get(`/tasks/${taskId}/files/${fileId}/download`, {
+      responseType: 'blob',
+    });
+    return response.data;
   }
 };
