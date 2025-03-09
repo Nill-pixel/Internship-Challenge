@@ -1,87 +1,60 @@
-# Welcome to React Router!
+# 🚀 Front-end - Gerenciador de Tarefas
 
-A modern, production-ready template for building full-stack React applications using React Router.
+<p align="center">
+  <a href="http://localhost:5173/">
+    <img src="https://i.imgur.com/6wj0hh6.jpg" alt="Logo" width="150" height="150">
+  </a>
+</p>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## ✨ Sobre o Projeto
 
-## Features
+Este é o front-end do **Gerenciador de Tarefas**, desenvolvido para o Desafio Técnico do Estágio Clique Aqui Soluções. A aplicação utiliza **React Router** para navegação e **Tailwind CSS** para estilização, oferecendo uma interface limpa, intuitiva e responsiva. Confira a aplicação em [http://localhost:5173/](http://localhost:5173/).
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## 📋 Funcionalidades
 
-## Getting Started
+- 📃 **Listagem de Tarefas:** Visualize todas as tarefas criadas.
+- ➕ **Criação e Edição:** Adicione e atualize tarefas facilmente.
+- 📎 **Upload de Arquivos:** Anexe arquivos (como PDF, imagens, etc.) às suas tarefas.
 
-### Installation
+## 🛠️ Instalação e Execução
 
-Install the dependencies:
+### Pré-requisitos
 
-```bash
-npm install
-```
+- [Node.js](https://nodejs.org/) (recomendado LTS)
+- [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
 
-### Development
+### Passos
 
-Start the development server with HMR:
+1. **Clone o repositório**
 
-```bash
-npm run dev
-```
+   ```bash
+   git clone https://github.com/Nill-pixel/Internship-Challenge.git
+   cd Internship-Challenge/front-end
+   ```
 
-Your application will be available at `http://localhost:5173`.
+2. **Instale as dependências**
 
-## Building for Production
+   ```bash
+   npm install
+   ```
 
-Create a production build:
+3. **Inicie a aplicação**
 
-```bash
-npm run build
-```
+   ```bash
+   npm run dev
+   ```
 
-## Deployment
+4. **Acesse a aplicação**
 
-### Docker Deployment
+   Abra o navegador e vá para [http://localhost:5173/](http://localhost:5173/).
 
-To build and run using Docker:
+## 🎨 Tecnologias Utilizadas
 
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+- **React Router** para gerenciamento de rotas.
+- **React** para a criação da interface.
+- **Tailwind CSS** para a estilização.
 
 ---
 
-Built with ❤️ using React Router.
+Desenvolvido com ❤️ por [Nilvany Sunguessungue](https://github.com/nill-pixel)  
+Confira mais projetos e contribua!
