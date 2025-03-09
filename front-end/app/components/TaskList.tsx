@@ -30,17 +30,6 @@ const TaskList: React.FC = () => {
         <h2 className="text-2xl font-bold">Tasks</h2>
         <div className="flex items-center space-x-4">
           <div className="flex items-center">
-            <label htmlFor="filter" className="mr-2 text-gray-700">Filter:</label>
-            <select
-              id="filter"
-              value={filter || ''}
-              onChange={(e) => setFilter(e.target.value || undefined)}
-              className="border rounded p-2"
-            >
-              <option value="">All Tasks</option>
-              <option value="pending">Pending</option>
-              <option value="completed">Completed</option>
-            </select>
           </div>
           <Link
             to="/tasks/new"
